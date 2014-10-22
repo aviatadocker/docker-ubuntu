@@ -1,17 +1,12 @@
 FROM ubuntu:14.04
 
-RUN date \
-  && sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list \
-  && date \
-  && apt-get update \
-  && date \
-  && apt-get -y upgrade \
-  && date \
-  && apt-get install -y build-essential python \
-  && date \
-  && apt-get install -y software-properties-common \
-  && date \
-  && apt-get install -y byobu curl git htop man unzip vim wget \
-  && date \
-  && rm -rf /var/lib/apt/lists/* \
-  && date 
+# Ubuntu 14.04 LTS
+
+RUN  date -u +"%Y-%m-%d %H:%M:%S" && sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list \
+  && date -u +"%Y-%m-%d %H:%M:%S" && apt-get update \
+  && date -u +"%Y-%m-%d %H:%M:%S" && apt-get -y upgrade \
+  && date -u +"%Y-%m-%d %H:%M:%S" && apt-get install -y build-essential python \
+  && date -u +"%Y-%m-%d %H:%M:%S" && apt-get install -y software-properties-common \
+  && date -u +"%Y-%m-%d %H:%M:%S" && apt-get install -y byobu curl git htop man unzip vim wget \
+  && date -u +"%Y-%m-%d %H:%M:%S" && rm -rf /var/lib/apt/lists/* \
+  && date -u +"%Y-%m-%d %H:%M:%S"
