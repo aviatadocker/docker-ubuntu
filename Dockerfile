@@ -7,7 +7,7 @@ RUN date \
   && date \
   && apt-get -y upgrade \
   && date \
-  && apt-get install -y build-essential \
+  && apt-get install -y build-essential python \
   && date \
   && apt-get install -y software-properties-common \
   && date \
