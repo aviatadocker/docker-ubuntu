@@ -1,6 +1,6 @@
-FROM ubuntu:14.04
+FROM ubuntu:14.04.1
 
-# Ubuntu 14.04 LTS
+# Ubuntu 14.04.1 LTS
 
 RUN  date -u +"%Y-%m-%d %H:%M:%S" && sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list \
   && date -u +"%Y-%m-%d %H:%M:%S" && apt-get update \
